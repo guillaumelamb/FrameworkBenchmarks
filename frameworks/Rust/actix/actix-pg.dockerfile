@@ -1,4 +1,6 @@
-FROM rust:1.35
+FROM rust:1.40
+
+RUN apt update -yqq && apt install -yqq cmake g++
 
 ADD ./ /actix
 WORKDIR /actix
